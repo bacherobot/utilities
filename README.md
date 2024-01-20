@@ -1,38 +1,31 @@
-# create-svelte
+# Bachero Utilities
+Un simple site permettant de créé votre config Bachero en quelques clics. Ce site vous posera des questions sur votre configuration et vous proposera le fichier de configuration selon vos réponse.
+![Bachero Utilities](docs/preview.png)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+## Installation
+Pour installer le site, vous devez avoir [NodeJS](https://nodejs.org/en/) d'installé sur votre machine. Ensuite, vous pouvez cloner le projet et installer les dépendances avec les commandes suivantes:
+```bash 
+git clone https://github.com/bacherobot/utilities.git
+cd utilities
+npm install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
+## Développement
+Pour tester vos modifications sur le site, vous pouvez utiliser la commande suivante:
 ```bash
 npm run dev
 
-# or start the server and open the app in a new browser tab
+# ou pour ouvrir le site dans votre navigateur lors du dev
 npm run dev -- --open
 ```
 
-## Building
+## Technologies utilisées
+- [Svelte](https://svelte.dev/)
+- [Shadcn/UI for Svelte](https://www.shadcn-svelte.com/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [ESLint](https://eslint.org/)
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Licence
+Ce projet est sous licence [MIT](LICENSE).
