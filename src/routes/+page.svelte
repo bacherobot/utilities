@@ -17,7 +17,7 @@
   let model = "https://raw.githubusercontent.com/bacherobot/bot/master/config/bachero.jsonc";
   let steps = [
     {
-      title: "Nom du bot",
+      title: "Identité du bot",
       description: "Quel est le nom du bot ?",
       name: "botName",
       type: "text",
@@ -25,8 +25,8 @@
       default: "Bachero"
     },
     {
-      title: "Couleur principale de l'embed",
-      description: "La couleur utilisée principalement pour les embeds",
+      title: "Couleur d'embed",
+      description: "Quelle couleur sera principalement utilisée dans les embeds ?",
       name: "embedColor",
       type: "color",
       category: "color",
@@ -36,8 +36,8 @@
       type: "skipper"
     },
     {
-      title: "Couleur secondaire de l'embed",
-      description: "La couleur utilisée parfois pour les embeds",
+      title: "Couleur d'embed",
+      description: "Quelle couleur d'accentuation sera utilisée dans les embeds ?",
       name: "secondEmbedColor",
       type: "color",
       category: "color",
@@ -47,8 +47,8 @@
       type: "skipper"
     },
     {
-      title: "Couleur de succès de l'embed",
-      description: "La couleur utilisée pour indiquer le succès d'une commande via un embed",
+      title: "Couleur d'embed",
+      description: "Quelle couleur doit être utilisée pour indiquer un accomplissement dans un embed ?",
       name: "successEmbedColor",
       type: "color",
       category: "color",
@@ -58,8 +58,8 @@
       type: "skipper",
     },
     {
-      title: "Couleur d'erreur de l'embed",
-      description: "La couleur utilisée pour indiquer l'erreur d'une commande via un embed",
+      title: "Couleur d'embed",
+      description: "Quelle couleur doit être utilisée pour indiquer une erreur d'exécution dans un embed ?",
       name: "dangerEmbedColor",
       type: "color",
       category: "color",
@@ -78,14 +78,14 @@
           value: "json"
         },
         {
-          label: "MongoDB",
+          label: "MongoDB (à configurer via .env)",
           value: "mongodb"
         }
       ],
       required: true
     },
     {
-      title: "Statut d'activité du bot",
+      title: "Statut du bot",
       description: "Quel statut d'activité voulez-vous avoir pour le bot ?",
       name: "botActivityContent",
       type: "text_not_required",
@@ -93,8 +93,8 @@
       default: "bachero.johanstick.fr",
     },
     {
-      title: "Type de statut d'activité du bot",
-      description: "Quel type de statut d'activité voulez-vous avoir pour le bot ?",
+      title: "Statut du bot",
+      description: "Quel type de statut d'activité voulez-vous définir ?",
       name: "botActivityType",
       type: "multichoice",
       category: "activity",
@@ -117,7 +117,7 @@
           value: "listening"
         },
         {
-          label: "Compétition",
+          label: "Participant à",
           value: "competing"
         },
         {
@@ -158,8 +158,8 @@
       required: true
     },
     {
-      title: "Préfixe des commandes",
-      description: "Quel préfixe voulez-vous utiliser pour les commandes ?",
+      title: "Commandes textes",
+      description: "Quel préfixe voulez-vous utiliser pour les commandes textuelles ?",
       name: "prefix",
       type: "text",
       category: "commands",
@@ -167,57 +167,57 @@
     },
     {
       title: "Commandes textes",
-      description: "Voulez-vous désactivé les commandes textes ? Si désactivé, seul les commandes slash seront utilisables.",
+      description: "Voulez-vous désactiver les commandes textes ? Si désactivées, seules les commandes slash seront utilisables.",
       name: "disableTextCommand",
       type: "yes_or_no",
       category: "commands",
     },
     {
-      title: "Utilisateur autorisés",
-      description: "Voulez-vous autorisé les bots à utiliser les commandes textes de Bachero ?",
+      title: "Utilisateurs autorisés",
+      description: "Voulez-vous autoriser les bots à utiliser les commandes textes de Bachero ?",
       name: "letBotUseCommands",
       type: "yes_or_no",
       category: "commands"
     },
     {
-      title: "Mise à jour automatique",
-      description: "Voulez-vous désactivé la vérification automatique de mise à jour ?",
+      title: "Vérification des mises à jour",
+      description: "Voulez-vous désactiver la vérification du bot des mises à jour au démarrage ?",
       name: "disableCheckUpdate",
       type: "yes_or_no",
       category: "debugging"
     },
     {
       title: "Rapports d'erreurs",
-      description: "Voulez-vous désactivé les rapports d'erreurs ?",
+      description: "Voulez-vous désactiver la création de rapports en cas d'erreurs ?",
       name: "disableReport",
       type: "yes_or_no",
       category: "debugging"
     },
     {
       title: "Logs",
-      description: "Voulez-vous activé les fichiers de logs ?",
+      description: "Voulez-vous conserver les logs dans des fichiers ?",
       name: "outputLogsInFile",
       type: "yes_or_no",
       category: "debugging"
     },
     {
+      title: "Logs",
+      description: "Voulez-vous afficher les logs de débogage dans la console ? Cela peut être utile pendant le développement de modules",
+      name: "showDebugLogsInConsole",
+      type: "yes_or_no",
+      category: "debugging"
+    },
+    {
       title: "Minification des fichiers générés",
-      description: "Voulez-vous désactivé la minification des fichiers générés pour les commandes textes ?",
-      name: "minifyGeneratedFiles",
+      description: "Voulez-vous désactiver la minification des fichiers générés pour les commandes textes ? Cela rend le code plus simple à lire",
+      name: "disableMinifyingTextCmdsFiles",
       type: "yes_or_no",
       category: "debugging"
     },
     {
       title: "Analytics",
-      description: "Voulez-vous désactivé les analytics ?",
+      description: "Voulez-vous désactiver le suivi de l'utilisation des commandes ? Aucune donnée n'est envoyée à Bachero, indispensable pour la commande /analytics",
       name: "disableCommandAnalytics",
-      type: "yes_or_no",
-      category: "debugging"
-    },
-    {
-      title: "Logs",
-      description: "Voulez-vous affiché les logs de debugging dans la console ?",
-      name: "showDebugLogsInConsole",
       type: "yes_or_no",
       category: "debugging"
     }
@@ -255,7 +255,7 @@
 
   async function generateHastebin() {
     let json = await generateJson();
-    let d = await fetch("https:/haste.johanstick.fr/documents", {
+    let d = await fetch("https://haste.johanstick.fr/documents", {
       method: "POST",
       body: json
     }).then(res => res.json());
@@ -269,7 +269,7 @@
   }
 </script>
 
-<div class="content dark flex items-center w-screen h-screen justify-center">
+<div class="content dark flex items-center absolute inset-0 justify-center p-4">
   {#if steps[step]}
     {#if steps[step].type === "text"}
       <Text
