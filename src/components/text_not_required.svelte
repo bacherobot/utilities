@@ -37,7 +37,7 @@
   }
 </script>
 
-<Card.Root>
+<Card.Root class="w-full md:w-auto">
   <Card.Header>
     <Card.Title class="flex">
       {#if category === "identity"}
@@ -67,7 +67,7 @@
     </Button>
 
     <Button class="w-full ml-2" on:click={onNone}>
-      <Cross1 class="mr-2 h-4 w-4" /> Aucun
+      <Cross1 class="min-[410px]:mr-2 h-4 w-4" /> <span class="max-[410px]:hidden">Aucun</span>
     </Button>
 
     <Button class="w-full ml-2" on:click={onSubmit}>

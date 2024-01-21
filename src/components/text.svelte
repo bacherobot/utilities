@@ -30,7 +30,7 @@
   }
 </script>
 
-<Card.Root>
+<Card.Root class="w-full md:w-auto">
   <Card.Header>
     <Card.Title class="flex">
       {#if category === "identity"}

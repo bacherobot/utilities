@@ -42,7 +42,7 @@
   }
 </script>
 
-<Card.Root>
+<Card.Root class="w-full md:w-auto">
   <Card.Header>
     <Card.Title class="flex">
       {#if category === "identity"}
@@ -61,8 +61,8 @@
     <Card.Description>{description}</Card.Description>
   </Card.Header>
   <Card.Content>
-    <Select.Root>
-      <Select.Trigger class="w-[300px]">
+    <Select.Root >
+      <Select.Trigger class="w-full md:w-[300px]">
         <Select.Value placeholder={placeholder} />
       </Select.Trigger>
       <Select.Content>

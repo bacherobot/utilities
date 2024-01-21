@@ -30,7 +30,7 @@
   }
 </script>
 
-<Card.Root>
+<Card.Root class="w-full md:w-auto">
   <Card.Header>
     <Card.Title class="flex">
       {#if category === "identity"}
@@ -48,7 +48,7 @@
       {/if} {title}</Card.Title>
     <Card.Description>{description}</Card.Description>
   </Card.Header>
-  <Card.Content>
+  <Card.Content class="w-full grid md:block justify-items-center items-center">
     <ColorPicker bind:hex isDialog={false} isAlpha={false} />
     {#if howTo}
       <a href={howTo} class="hover:underline text-xs" target="_blank">{howToLabel}</a>

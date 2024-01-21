@@ -27,7 +27,7 @@
   }
 </script>
 
-<Card.Root>
+<Card.Root class="w-full md:w-auto">
   <Card.Header>
     <Card.Title class="flex">
       {#if category === "identity"}
@@ -52,7 +52,7 @@
   </Card.Content>
   <Card.Footer>
     <Button class="w-full" on:click={onReturn}>
-      <ArrowLeft class="mr-2 h-4 w-4" /> Retour
+      <ArrowLeft class="min-[410px]:mr-2 h-4 w-4" /> <span class="max-[410px]:hidden">Retour</span>
     </Button>
     <Button class="w-full ml-2" on:click={() => { onSubmit(true) }}>
       <Check class="mr-2 h-4 w-4" /> Oui
