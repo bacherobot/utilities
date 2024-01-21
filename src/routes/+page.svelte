@@ -181,7 +181,7 @@
     },
     {
       title: "Vérification des mises à jour",
-      description: "Voulez-vous désactiver la vérification du bot des mises à jour au démarrage ?",
+      description: "Voulez-vous désactiver la vérification des mises à jour du bot au démarrage ?",
       name: "disableCheckUpdate",
       type: "yes_or_no",
       category: "debugging"
