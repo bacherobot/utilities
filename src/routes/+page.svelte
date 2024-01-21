@@ -376,3 +376,24 @@
       --cp-bg-color: rgba(0, 0, 0, 0);
   }
 </style>
+
+<svelte:head>
+  <title>Bachero Utilities</title>
+  <meta name="description" content="Un simple configurateur visuel pour Bachero" />
+  <meta name="keywords" content="bachero, utilities, bot, discord, discord.js, discord bot, bot discord, bot discord.js, discord.js bot" />
+  <meta name="author" content="Bachero" />
+  <meta name="robots" content="index, nofollow" />
+
+  <meta property="og:title" content="Bachero Utilities" />
+  <meta property="og:description" content="Un simple configurateur visuel pour Bachero" />
+  <meta property="og:type" content="configurator" />
+  <meta property="og:url" content="https://config.bachero.johanstick.fr" />
+  <meta property="og:image" content="https://bachero.johanstick.fr/icon/carre.png" />
+  <meta property="og:site_name" content="Bachero Utilities" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <meta name="twitter:title" content="Bachero Utilities" />
+  <meta name="twitter:description" content="Un simple configurateur visuel pour Bachero" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://bachero.johanstick.fr/icon/carre.png" />
+</svelte:head>
